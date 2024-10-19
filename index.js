@@ -9,7 +9,7 @@ import connectionToDatabase from "./db/db.js";
 connectionToDatabase().then(r => {})
 const app = express();
 app.use(cors({
-    origin: "https://rekcianf.vercel.app/",
+    origin: "https://rekcianf.vercel.app",
     credentials: true
 }));
 app.use(express.json());
