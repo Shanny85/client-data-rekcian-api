@@ -13,7 +13,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-    origin: "https://rekcianf.vercel.app", // Ensure this matches exactly
+    origin: "https://client-data-rekcian-frontend.vercel.app", // Ensure this matches exactly
     credentials: true, // Allows credentials (like cookies) to be sent
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS", // Explicitly declare allowed methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
