@@ -8,7 +8,10 @@ import connectionToDatabase from "./db/db.js";
 
 connectionToDatabase().then(r => {})
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "https://rekcianf.vercel.app/",
+    credentials: true
+}));
 app.use(express.json());
 app.use('/public', express.static('public'));
 app.use(express.static('public/uploads'));
