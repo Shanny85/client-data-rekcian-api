@@ -19,17 +19,17 @@ const employeeSchema = new Schema({
     dob: { type: Date },
     gender: {
         type: String,
-        enum: ["male", "female", "other"],
-        default: "other"
+        enum: ["Male", "Female", "Other"],
+        require: true
     },
     mc: {
         type: String,
-        enum: ["yes", "no"],
+        enum: ["Yes", "No"],
         required: true
     },
     purpose: {
         type: String,
-        enum: ["medicinal", "recreational", "culinary"],
+        enum: ["Medicinal", "Recreational", "Culinary"],
         required: true
     }
 }, { timestamps: true }); // Automatically manage createdAt and updatedAt
