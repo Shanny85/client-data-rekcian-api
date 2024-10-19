@@ -15,10 +15,14 @@ const app = express();
 const corsOptions = {
     origin: "https://rekcianf.vercel.app", // Ensure this matches exactly
     credentials: true, // Allows credentials (like cookies) to be sent
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS", // Explicitly declare allowed methods
+    allowedHeaders: ["Content-Type", "Authorization"], // Allow specific headers
 };
 
 // Apply CORS middleware
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Enable preflight across all routes
+
 app.use(express.json());
 app.use('/public', express.static('public'));
 app.use(express.static('public/uploads'));
