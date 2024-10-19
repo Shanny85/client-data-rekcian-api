@@ -19,7 +19,7 @@ const app = express();
 const corsOptions = {
     origin: "https://snazzy-starburst-740f5a.netlify.app",
     credentials: true,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
+    methods: ["GET","HEAD","PUT","PATCH","POST","DELETE","OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
 };
 
