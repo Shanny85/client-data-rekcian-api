@@ -17,7 +17,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-    origin: "https://client-data-rekcian-frontend.vercel.app",
+    origin: "https://snazzy-starburst-740f5a.netlify.app",
     credentials: true,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS",
     allowedHeaders: ["Content-Type", "Authorization"],

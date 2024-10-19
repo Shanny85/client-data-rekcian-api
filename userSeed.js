@@ -5,7 +5,7 @@ import connectionToDatabase from './db/db.js'
 const userRegistration = async () => {
     await connectionToDatabase()
     try {
-        const hashPassword = await bcrypt.hash("snR@2023", 10)
+        const hashPassword = await bcrypt.hash("admin", 10)
         const newUser = new User({
             name: "Admin",
             email: "sndeedle@gmail.com",//smokeofwar@gmail.com
