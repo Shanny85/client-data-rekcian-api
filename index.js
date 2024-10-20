@@ -19,7 +19,7 @@ const app = express();
 
 // Apply CORS middleware
 app.use(cors({
-    origin: "https://snazzy-starburst-740f5a.netlify.app"
+    origin: "https://client-data-rekcian-frontend.vercel.app"
 }));
 app.use(express.json());
 app.use('/public', express.static('public'));
