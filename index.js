@@ -16,17 +16,9 @@ connectionToDatabase();
 const app = express();
 
 // CORS configuration
-const corsOptions = {
-    origin: "https://snazzy-starburst-740f5a.netlify.app",
-    credentials: true,
-    methods: ["GET","HEAD","PUT","PATCH","POST","DELETE","OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-};
 
 // Apply CORS middleware
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
-
+app.use(cors());
 app.use(express.json());
 app.use('/public', express.static('public'));
 app.use(express.static('public/uploads'));
