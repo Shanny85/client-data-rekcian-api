@@ -18,7 +18,9 @@ const app = express();
 // CORS configuration
 
 // Apply CORS middleware
-app.use(cors());
+app.use(cors({
+    origin: "https://snazzy-starburst-740f5a.netlify.app"
+}));
 app.use(express.json());
 app.use('/public', express.static('public'));
 app.use(express.static('public/uploads'));
